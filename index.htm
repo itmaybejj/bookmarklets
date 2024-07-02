@@ -1,11 +1,45 @@
+<html>
 <head><title>Bookmarklets</title></head>
 <body>
+  <main>
 
-  <p>My bookmarklets (drag to browser toolbar or right-click):</p>
+  <h1>Accessibility checking bookmarklets</h1>
+  <h2>Bookmarklets I maintain</h2>
+  <p><strong>Drag to browser toolbar or right-click to add script as bookmark:</strong></p>
+  <p><a class="button" href="javascript:(function()%7Bif%20(typeof%20labelImages%20!%3D%3D%20'undefined')%20%7B%0A%20%20let%20labelImages%3B%0A%7D%0AlabelImages%20%3D%20document.querySelectorAll('img')%3B%0AlabelImages.forEach(img%20%3D%3E%20%7B%0A%20%20if%20(img.clientWidth%20%3E%20100)%20%7B%0A%20%20let%20alt%20%3D%20img.getAttribute('alt')%3B%0A%20%20let%20vis%20%3D%20document.createElement('div')%3B%0A%20%20vis.style.setProperty('padding'%2C%20'10px')%3B%0A%20%20vis.style.setProperty('margin-top'%2C%20'10px%3B')%3B%0A%20%20vis.style.setProperty('border'%2C%20'1px%20solid')%3B%0A%20%20vis.style.setProperty('border-left'%2C%20'0')%3B%0A%20%20vis.style.setProperty('box-shadow'%2C%20'3px%203px%203px%20%23000')%3B%0A%20%20vis.style.setProperty('position'%2C%20'absolute')%3B%0A%20%20vis.style.setProperty('z-index'%2C%20'1000')%3B%0A%20%20vis.style.setProperty('color'%2C%20'%23fff')%3B%0A%20%20vis.style.setProperty('line-height'%2C%20'1.4')%3B%0A%20%20vis.style.setProperty('max-width'%2C%20img.clientWidth%20%2B%20'px')%3B%0A%20%20if%20(alt.length%20%3E%200)%20%7B%0A%20%20%20%20vis.style.setProperty('background'%2C%20'purple')%3B%0A%20%20%20%20vis.textContent%20%3D%20'alt%20text%3A%20'%20%2B%20alt%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20vis.style.setProperty('background'%2C%20'darkred')%3B%0A%20%20%20%20vis.textContent%20%3D%20'no%20alt%20text'%3B%0A%20%20%7D%0A%20%20img.insertAdjacentElement('afterend'%2C%20vis)%3B%0A%20%20%7D%0A%7D)%7D)()%3B">InstaAlt</a> visualizes image alt text</p>
+  <p><em>(<a href="https://github.com/itmaybejj/bookmarklets/edit/main/index.htm">Source</a>)</em></p>
+  <h2>Other bookmarklets and tools I use</h2>
   <ul>
-    <li><a href="javascript:(function()%7Bif%20(typeof%20labelImages%20!%3D%3D%20'undefined')%20%7B%0A%20%20let%20labelImages%3B%0A%7D%0AlabelImages%20%3D%20document.querySelectorAll('img')%3B%0AlabelImages.forEach(img%20%3D%3E%20%7B%0A%20%20if%20(img.clientWidth%20%3E%20100)%20%7B%0A%20%20let%20alt%20%3D%20img.getAttribute('alt')%3B%0A%20%20let%20vis%20%3D%20document.createElement('div')%3B%0A%20%20vis.style.setProperty('padding'%2C%20'10px')%3B%0A%20%20vis.style.setProperty('margin-top'%2C%20'10px%3B')%3B%0A%20%20vis.style.setProperty('border'%2C%20'1px%20solid')%3B%0A%20%20vis.style.setProperty('border-left'%2C%20'0')%3B%0A%20%20vis.style.setProperty('box-shadow'%2C%20'3px%203px%203px%20%23000')%3B%0A%20%20vis.style.setProperty('position'%2C%20'absolute')%3B%0A%20%20vis.style.setProperty('z-index'%2C%20'1000')%3B%0A%20%20vis.style.setProperty('color'%2C%20'%23fff')%3B%0A%20%20vis.style.setProperty('line-height'%2C%20'1.4')%3B%0A%20%20vis.style.setProperty('max-width'%2C%20img.clientWidth%20%2B%20'px')%3B%0A%20%20if%20(alt.length%20%3E%200)%20%7B%0A%20%20%20%20vis.style.setProperty('background'%2C%20'purple')%3B%0A%20%20%20%20vis.textContent%20%3D%20'alt%20text%3A%20'%20%2B%20alt%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20vis.style.setProperty('background'%2C%20'darkred')%3B%0A%20%20%20%20vis.textContent%20%3D%20'no%20alt%20text'%3B%0A%20%20%7D%0A%20%20img.insertAdjacentElement('afterend'%2C%20vis)%3B%0A%20%20%7D%0A%7D)%7D)()%3B">InstaAlt</a> visualizes image alt text</li>
+    <li><a href="https://sa11y.netlify.app/bookmarklet/">Sa11y Accessibility Checker</a> (can't run on sites with strict content security policies)</li>
+    <li><a href="https://wave.webaim.org/extension/">WAVE</a> (browser plugin)</li>
+    <li><a href="https://www.deque.com/axe/">AXE</a> (browser plugin; FF link is near the bottom of the page)</li>
   </ul>
-  <p>
+  </main>
+  <footer>
+    <p>
+      <a href="https://digital.accessibility.princeton.edu/how/test">« DIY accessibility testing at Princeton</a>
+    </p>
+  </footer>
 
-  </p>
+  <style>
+    main, footer {
+      max-width: 60em;
+      margin: 1rem auto;
+      padding: 2rem;
+      font-family: sans-serif;
+    }
+    h2 {
+      padding-top: 2em;
+    }
+    .button {
+      background: darkblue;
+      display: inline-block;
+      padding: .75rem 1rem .5rem;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+    
 </body>
+</html>
