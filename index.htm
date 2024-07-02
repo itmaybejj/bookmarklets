@@ -1,5 +1,11 @@
-# Bookmarklets
+<head><title>Bookmarklets</title></head>
+<body>
 
-Bookmark these (drag to browser toolbar or right-click) and use as needed.
+  <p>My bookmarklets (drag to browser toolbar or right-click):</p>
+  <ul>
+    <li><a href="javascript:(function()%7Bif%20(typeof%20labelImages%20!%3D%3D%20'undefined')%20%7B%0A%20%20let%20labelImages%3B%0A%7D%0AlabelImages%20%3D%20document.querySelectorAll('img')%3B%0AlabelImages.forEach(img%20%3D%3E%20%7B%0A%20%20let%20alt%20%3D%20img.getAttribute('alt')%3B%0A%20%20let%20vis%20%3D%20document.createElement('div')%3B%0A%20%20vis.style.setProperty('padding'%2C%20'10px')%3B%0A%20%20vis.style.setProperty('margin-top'%2C%20'10px%3B')%3B%0A%20%20vis.style.setProperty('background'%2C%20'rgb(14%2C1%2C165)')%3B%0A%20%20vis.style.setProperty('border'%2C%20'1px%20solid')%3B%0A%20%20vis.style.setProperty('border-left'%2C%20'0')%3B%0A%20%20vis.style.setProperty('box-shadow'%2C%20'3px%203px%203px%20%23000')%3B%0A%20%20vis.style.setProperty('position'%2C%20'absolute')%3B%0A%20%20vis.style.setProperty('z-index'%2C%20'1000')%3B%0A%20%20vis.style.setProperty('top'%2C%20'10px')%3B%0A%20%20vis.textContent%20%3D%20'alt%20text%3A%20'%20%2B%20alt%3B%0A%20%20img.insertAdjacentElement('afterend'%2C%20vis)%3B%0A%7D)%7D)()%3B">InstaAlts</a> visualizes alts on Instagram</li>
+  </ul>
+  <p>
 
-<a href="javascript:(function()%7Bif%20(typeof%20labelImages%20!%3D%3D%20'undefined')%20%7B%0A%20%20let%20labelImages%3B%0A%7D%0AlabelImages%20%3D%20document.querySelectorAll('img')%3B%0AlabelImages.forEach(img%20%3D%3E%20%7B%0A%20%20let%20alt%20%3D%20img.getAttribute('alt')%3B%0A%20%20let%20vis%20%3D%20document.createElement('div')%3B%0A%20%20vis.style.setProperty('padding'%2C%20'10px')%3B%0A%20%20vis.style.setProperty('margin-top'%2C%20'10px%3B')%3B%0A%20%20vis.style.setProperty('background'%2C%20'rgb(14%2C1%2C165)')%3B%0A%20%20vis.style.setProperty('border'%2C%20'1px%20solid')%3B%0A%20%20vis.style.setProperty('border-left'%2C%20'0')%3B%0A%20%20vis.style.setProperty('box-shadow'%2C%20'3px%203px%203px%20%23000')%3B%0A%20%20vis.style.setProperty('position'%2C%20'absolute')%3B%0A%20%20vis.style.setProperty('z-index'%2C%20'1000')%3B%0A%20%20vis.style.setProperty('top'%2C%20'10px')%3B%0A%20%20vis.textContent%20%3D%20'alt%20text%3A%20'%20%2B%20alt%3B%0A%20%20img.insertAdjacentElement('afterend'%2C%20vis)%3B%0A%7D)%7D)()%3B">InstaAlts</a> visualizes alts on Instagram
+  </p>
+</body>Bookmarklets
