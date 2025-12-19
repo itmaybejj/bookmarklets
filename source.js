@@ -26,6 +26,6 @@ labelImages.forEach(img => {
     vis.style.setProperty('background', 'darkred');
     vis.textContent = 'no alt text';
   }
-  img.insertAdjacentElement('afterend', vis);
+  img.insertAdjacentElement('beforebegin', vis);
   }
 })
